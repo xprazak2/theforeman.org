@@ -94,7 +94,16 @@ You will be presented with a list of possible changes. You can remove the roles 
 
 ![ansible import roles](static/images/plugins/foreman_ansible/ansible_import_roles.png)
 
-## 4.2 Running a playbook
+## 4.2 Selecting roles for a host
+
+Ansible roles can be assigned to a host on 'Ansible Roles' tab on the host's edit page. It is also possible to inherit ansible roles form a hostgroup.
+Inherited roles are added automatically upon hostgroup change and the select interface disables direct removal of such items.
+![select roles for host](static/images/plugins/foreman_ansible/select_roles_for_host.png)
+
+Hostgroup edit form contains very similar tab where you can pre-configure selection of ansible roles for hosts.
+![select roles for hostgroup](static/images/plugins/foreman_ansible/select_roles_for_hostgroup.png)
+
+## 4.3 Running a playbook
 
 To run the playbook with the roles selected, click on the 'play Ansible roles' button and Foreman will run a playbook on the background.  Logs for this playbook can be found under the regular Foreman log, usually `/var/log/foreman/production.log`
 
